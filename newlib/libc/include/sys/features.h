@@ -527,6 +527,13 @@ extern "C" {
 
 #endif /* __CYGWIN__ */
 
+#ifdef __riscv
+
+#define _POSIX_THREADS				        1
+#define _UNIX98_THREAD_MUTEX_ATTRIBUTES     1
+
+#endif
+
 #ifdef __cplusplus
 }
 #endif
