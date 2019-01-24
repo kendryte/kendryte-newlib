@@ -15,6 +15,8 @@
 
   .text
   .global _start
+  .global _lock_acquire_recursive
+  .global _lock_release_recursive
   .type   _start, @function
 _start:
   # Initialize global pointer
@@ -41,3 +43,6 @@ _start:
   call    main
   tail    exit
   .size  _start, .-_start
+_lock_acquire_recursive:
+_lock_release_recursive:
+  ret
