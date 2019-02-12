@@ -29,9 +29,6 @@
 float
 __ieee754_sqrtf(float x)
 {
-	double d;
 	asm ("fsqrt.s %0, %1" : "=f" (x) : "f" (x));
-	asm ("fcvt.d.s %0, %1" : "=f" (d) : "f" (x));
-	asm ("fcvt.s.d %0, %1" : "=f" (x) : "f" (d));
 	return x;
 }
